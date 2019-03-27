@@ -10,3 +10,11 @@ services:
       - "../vue:/app"
     network_mode: "bridge"
 
+  flask:
+    container_name: alaska-test
+    volumes:
+      - "../flask:/deploy"
+    build: flask
+    ports:
+      - "5000:5000"
+
