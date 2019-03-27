@@ -52,6 +52,16 @@ cd docker/sails
 This will create an empty Sails project (you will be asked for entering some info)
 
 
+#### == For using React ==
+If you want to use React you will need to create a new project and install the dependences. Everything is done in a container just typing:
+
+```sh
+cd docker/react
+./init
+```
+This will create an empty React project (you will be asked for entering some info)
+
+
 
 ### Run
 
