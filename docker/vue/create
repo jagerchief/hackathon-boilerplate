@@ -1,0 +1,26 @@
+#!/usr/bin/env bash
+
+CONTAINER_NAME=vue-generator:dev
+
+# Build container
+docker build -t ${CONTAINER_NAME} .
+# Init new Vue project
+docker run \
+    -it \
+    --rm \
+    -v $(pwd)/../../vue:/app \
+    -w / \
+    ${CONTAINER_NAME} \
+    vue init webpack app
+
+# Install dependencies
+docker run \
+    -it \
+    --rm \
+    -v $(pwd)/../../vue:/app \
+    -w /app \
+    ${CONTAINER_NAME} \
+    npm install
+
+# Copy dev-server file to enable hot reloading
+cp -R $PWD/server/dev-server.js $PWD/app/build/dev-server.js
