@@ -1,4 +1,4 @@
-# Hackathon boilerplate
+# Web app microsystem-based boilerplate. Ready to code.
 
 This repo contains all the messy docker, dependences and frameworks stuff ready to start coding when you want to start a new project.
 It comes with some frontend and backend pre-build microservices:
