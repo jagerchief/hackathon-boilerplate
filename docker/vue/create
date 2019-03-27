@@ -23,4 +23,4 @@ docker run \
     npm install
 
 # Copy dev-server file to enable hot reloading
-cp -R $PWD/server/dev-server.js $PWD/app/build/dev-server.js
+cp -R dev-server.js $PWD/../../vue/build/dev-server.js
