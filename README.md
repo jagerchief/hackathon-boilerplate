@@ -6,6 +6,7 @@ It comes with some frontend and backend pre-build microservices:
 | Service | Framework | Language |
 | ------ | ------ | ------ |
 | Front | Vue | Javascript |
+| Front | React | Javascript |
 | Back | Flask | Python |
 | Back | Sails | Javascript |
 
@@ -65,6 +66,7 @@ The ports for the framework are:
 | Framework | Port |
 | ------ | ------ |
 | Vue | 8080 |
+| React | 8030 |
 | Flask | 5000 |
 | Sails | 8090 |
 

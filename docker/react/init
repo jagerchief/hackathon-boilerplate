@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+
+CONTAINER_NAME=react-generator:dev
+
+# Build container
+docker build -t ${CONTAINER_NAME} .
+docker run \
+    -it \
+    --rm \
+    -v $(pwd)/../../react:/server \
+    -w / \
+    ${CONTAINER_NAME} \
+    create-react-app /server/myapp
