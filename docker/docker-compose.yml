@@ -10,8 +10,16 @@ services:
       - "../vue:/app"
     network_mode: "bridge"
 
+  sails:
+    container_name: sails
+    ports:
+      - "8090:1337"
+    volumes:
+      - "../sails/myapp:/server"
+    build: sails
+
   flask:
-    container_name: alaska-test
+    container_name: flask
     volumes:
       - "../flask:/deploy"
     build: flask

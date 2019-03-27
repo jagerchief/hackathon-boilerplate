@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+
+CONTAINER_NAME=sails-generator:dev
+
+# Build container
+docker build -t ${CONTAINER_NAME} .
+# Init new Sails project
+docker run \
+    -it \
+    --rm \
+    -v $(pwd)/../../sails:/server \
+    -w / \
+    ${CONTAINER_NAME} \
+    sails new /server/myapp
